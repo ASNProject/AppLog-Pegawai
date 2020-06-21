@@ -2,7 +2,7 @@
 
 # LOGIN
 
-![1](https://user-images.githubusercontent.com/49858542/85214068-ab5eca00-b390-11ea-95ae-0b1db99ba9b2.JPG) ![2](Menu Login digunakan masuk kedalam database pegawai yang sudah terdaftar dan dapat mendaftar dengan memilih "Daftar")
+![1](https://user-images.githubusercontent.com/49858542/85214068-ab5eca00-b390-11ea-95ae-0b1db99ba9b2.JPG) | Menu Login digunakan masuk kedalam database pegawai yang sudah terdaftar dan dapat mendaftar dengan memilih "Daftar"
 
 # REGISTER
 
