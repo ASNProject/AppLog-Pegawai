@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="orange">#F6950E</color>
+    <color name="birumuda">#44A0C1</color>
+    <color name="birumandantua" >#337AD3</color>
+    <color name="merah1">#E7201F</color>
+    <color name="TransparentGrey">#33000000</color>
+    <color name="Abu">#F3F7FB</color>
+    <color name="Ungu">#6C6CC7</color>
+
+</resources>

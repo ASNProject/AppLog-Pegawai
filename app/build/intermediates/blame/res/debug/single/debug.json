@@ -1,0 +1,610 @@
+[
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-xhdpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_email_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_email_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_add_box_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add_box_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_add_circle_outline_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add_circle_outline_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_person_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_person_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kualitasair.jpg.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\kualitasair.jpg"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_event_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_event_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_d2.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\d2.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_detail_air.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\fragment_detail_air.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_input__data__kolam.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_input__data__kolam.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-mdpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_kotak1.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\kotak1.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_perlakuan.jpg.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\perlakuan.jpg"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-ldpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu_input.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_menu_input.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_panen.jpg.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\panen.jpg"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_list_kolam.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\item_list_kolam.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button1.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\button1.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_verified_user_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_verified_user_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_input_data_air.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\fragment_input_data_air.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_expand_more_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_expand_more_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_phone_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_phone_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button2.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\button2.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_delete_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_delete_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_location_on_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_location_on_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_input_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_input_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-hdpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_edit_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_edit_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_dashboard.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_dashboard.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_filter_drama_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_filter_drama_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_person_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button3.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\button3.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_location_on_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_location_on_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_menu_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pakanuadang.jpg.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\pakanuadang.jpg"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-xxxhdpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_delete_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_delete_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_input_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_input_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_email_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_email_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_add_box_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_add_box_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_verified_user_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_verified_user_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_add_circle_outline_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_add_circle_outline_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_lock_open_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_lock_open_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_d1.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\d1.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_phone_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_filter_drama_black_24dp.xml.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_filter_drama_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_event_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_event_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sampling.jpg.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable\\sampling.jpg"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_lock_open_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_lock_open_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_edit_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_edit_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_data_air.xml.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\layout\\activity_data_air.xml"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_gambar.png.flat",
+        "source": "D:\\AppLog2\\app\\src\\main\\res\\drawable-xxhdpi\\gambar.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_expand_more_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_expand_more_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AppLog2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_menu_black_24dp.png.flat",
+        "source": "D:\\AppLog2\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_menu_black_24dp.png"
+    }
+]

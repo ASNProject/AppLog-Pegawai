@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MenuInput">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tnamakolam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/olocation"
+            android:layout_below="@id/tnamakolam"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_menu_black_24dp"></ImageView>
+
+        <TextView
+            android:id="@+id/text22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Data"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/olocation"
+            android:layout_marginTop="20dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/editkolam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/olocation"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Edit"
+            android:textSize="16dp"
+            android:textColor="@color/birumandantua"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/ic_edit_black_24dp"></TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/text22"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ojumlahtebarekor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/idimage"
+                    android:layout_toRightOf="@+id/idimage"
+                    android:text="550000"
+                    android:textColor="@color/birumandantua"
+                    android:textSize="30dp"
+                    android:textStyle="bold"></TextView>
+
+                <ImageView
+                    android:id="@+id/idimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_verified_user_black_24dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah:"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ojumlahtebarekor"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/ojumlahtebarekor"
+                    android:layout_toRightOf="@+id/ojumlahtebarekor"
+                    android:text="Ekor"
+                    android:textColor="@color/birumandantua"
+                    android:textSize="10dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/text24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ojumlahtebarekor"
+                    android:layout_alignStart="@+id/ojumlahtebarekor"
+                    android:layout_alignLeft="@+id/ojumlahtebarekor"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Tebar:"></TextView>
+
+                <TextView
+                    android:id="@+id/otanggaltebar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text24"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/text24"
+                    android:layout_toRightOf="@+id/text24"></TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    app:cardCornerRadius="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/birumandantua">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="15dp"
+                            android:text="USIA"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:drawableLeft="@drawable/ic_event_black_24dp"
+                            android:textSize="15dp"></TextView>
+                        <TextView
+                            android:id="@+id/ousia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:layout_gravity="center_horizontal"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hari"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            ></TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <HorizontalScrollView
+            android:id="@+id/scroll1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/cardview3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="jumlah sampling"
+                        android:layout_gravity="center_horizontal"></TextView>
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                      <TextView
+                          android:id="@+id/ojumlahtebarsampling"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="#000000"
+                          android:textStyle="bold"
+                          android:layout_centerVertical="true"
+                          android:layout_centerHorizontal="true"></TextView>
+                  </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kepadatan"
+                        android:layout_gravity="center_horizontal"></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/okepadatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"></TextView>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="luas area"
+                        android:layout_gravity="center_horizontal"></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/oluasarea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"></TextView>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/scroll1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/kualitasair">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_add_circle_outline_black_24dp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/asada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Kualitas Air"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/asada"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Tambahkan Info"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/terakhirupdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="01-01-2020"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_toStartOf="@+id/terakhirupdate"
+                        android:layout_toLeftOf="@+id/terakhirupdate"
+                        android:text="Updated :"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cardview4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/pakanuadang">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_add_circle_outline_black_24dp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/asadb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Pakan"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/asadb"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Tambahkan Info"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/terakhirupdateb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="01-01-2020"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_toStartOf="@+id/terakhirupdateb"
+                        android:layout_toLeftOf="@+id/terakhirupdateb"
+                        android:text="Updated :"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview6"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cardview5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sampling">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_add_circle_outline_black_24dp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/asadc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Sampling"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/asadc"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Tambahkan Info"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/terakhirupdatec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="01-01-2020"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_toStartOf="@+id/terakhirupdatec"
+                        android:layout_toLeftOf="@+id/terakhirupdatec"
+                        android:text="Updated :"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview7"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cardview6"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/panen">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_add_circle_outline_black_24dp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/asadd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Panen"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/asadd"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Tambahkan Info"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/terakhirupdated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="01-01-2020"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_toStartOf="@+id/terakhirupdated"
+                        android:layout_toLeftOf="@+id/terakhirupdated"
+                        android:text="Updated :"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview8"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/cardview7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/perlakuan">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_add_circle_outline_black_24dp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/asade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Sampling"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/asade"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="Tambahkan Info"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/terakhirupdatee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="01-01-2020"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_toStartOf="@+id/terakhirupdatee"
+                        android:layout_toLeftOf="@+id/terakhirupdatee"
+                        android:text="Updated :"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="italic"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</ScrollView>
+</RelativeLayout>

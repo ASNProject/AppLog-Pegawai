@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Dashboard">
+
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hallo, "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/textinputnamauser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text11"
+        android:layout_alignBottom="@+id/text11"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/text11"
+        android:layout_toRightOf="@+id/text11"
+        android:text="Username"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textinputnamauser"
+        android:layout_alignBottom="@+id/textinputnamauser"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="-13dp"
+        android:drawableTop="@drawable/ic_input_black_24dp"
+        android:text="Log Out"
+        android:textSize="10dp"
+        android:textStyle="bold"></TextView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_below="@id/text11"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/d2">
+
+            <ImageView
+                android:layout_width="87dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/gambar"></ImageView>
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard utama, pilih kolam"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                ></TextView>
+            <TextView
+                android:id="@+id/text13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text12"
+                android:text="yang akan diinputkan data."
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                android:layout_marginLeft="22dp"
+
+                ></TextView>
+            <TextView
+                android:id="@+id/text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text13"
+                android:text="Tambahkan jika masih kosong"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                android:layout_marginLeft="24dp"
+                ></TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/tambahkolam"
+        android:layout_width="142dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/cardview1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button2"
+        android:drawableRight="@drawable/ic_add_box_black_24dp"
+        android:text="Tambah Kolam"
+        android:textColor="#FFFFFF"></Button>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardview2"
+    android:layout_below="@id/tambahkolam"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Kolam"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            ></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleviewlistkolam"
+            android:layout_below="@id/text15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

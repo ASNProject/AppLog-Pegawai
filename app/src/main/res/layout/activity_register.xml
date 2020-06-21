@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Register">
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:textSize="40dp"></TextView>
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan masukkan data akun anda seperti"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:layout_below="@id/text7">
+    </TextView>
+    <TextView
+        android:id="@+id/text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email, Username, Password, dan"
+        android:layout_marginLeft="20dp"
+        android:textStyle="italic"
+        android:layout_below="@id/text8">
+    </TextView>
+    <TextView
+        android:id="@+id/text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="data yang lainnya."
+        android:layout_marginLeft="20dp"
+        android:textStyle="italic"
+        android:layout_below="@id/text9">
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/text10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/d1">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_expand_more_black_24dp"></ImageView>
+
+        <EditText
+            android:id="@+id/iemailregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/kotak1"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:hint="Email"></EditText>
+
+        <EditText
+            android:id="@+id/iusernmaeregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/iemailregister"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/kotak1"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:hint="Username"></EditText>
+
+        <EditText
+            android:id="@+id/ipasswordregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/iusernmaeregister"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/kotak1"
+            android:drawableLeft="@drawable/ic_lock_open_black_24dp"
+            android:hint="Password"
+            android:inputType="textPassword"></EditText>
+
+        <EditText
+            android:id="@+id/ialamtregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ipasswordregister"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/kotak1"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:hint="Alamat"></EditText>
+
+        <EditText
+            android:id="@+id/inotelfonregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ialamtregister"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/kotak1"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:hint="No. Telphone"></EditText>
+
+        <Button
+            android:id="@+id/buttonregister"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/inotelfonregister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/button1"
+            android:text="REGISTER"
+            android:textColor="#FFFFFF"></Button>
+    </RelativeLayout>
+
+
+</RelativeLayout>
