@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.DataAir"></activity>
+        <activity android:name=".Activity.DataPerlakuan"></activity>
+        <activity android:name=".Activity.DataPanen" />
+        <activity android:name=".Activity.DataSampling" />
+        <activity android:name=".Activity.DataPakan" />
+        <activity android:name=".Activity.DataAir" />
         <activity android:name=".Fragment.DetailAir" />
         <activity android:name=".Fragment.InputDataAir" />
         <activity android:name=".Activity.MenuInput" />

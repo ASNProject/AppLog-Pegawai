@@ -39,5 +39,12 @@ public class SharePreferences {
         return pref.getString("password", null);
     }
 
+    public void setUsia (String usia){
+        editor.putString("usia", usia);
+        editor.commit();
+    }
+    public String getUsia (){
+        return pref.getString("usia", null);
+    }
 
 }

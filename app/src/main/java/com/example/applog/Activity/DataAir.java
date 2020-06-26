@@ -7,12 +7,14 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import com.example.applog.Adapter.AdapterDataAir;
 import com.example.applog.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class DataAir extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

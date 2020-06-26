@@ -596,7 +596,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="10dp"
                         android:layout_marginLeft="15dp"
-                        android:text="Sampling"
+                        android:text="Perlakuan"
                         android:textColor="#FFFFFF"
                         android:textSize="30dp"
                         android:textStyle="bold"></TextView>

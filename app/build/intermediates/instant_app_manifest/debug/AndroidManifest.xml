@@ -25,6 +25,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.applog.Activity.DataPerlakuan" />
+        <activity android:name="com.example.applog.Activity.DataPanen" />
+        <activity android:name="com.example.applog.Activity.DataSampling" />
+        <activity android:name="com.example.applog.Activity.DataPakan" />
         <activity android:name="com.example.applog.Activity.DataAir" />
         <activity android:name="com.example.applog.Fragment.DetailAir" />
         <activity android:name="com.example.applog.Fragment.InputDataAir" />
