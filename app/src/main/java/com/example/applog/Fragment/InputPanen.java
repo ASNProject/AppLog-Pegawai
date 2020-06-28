@@ -151,7 +151,7 @@ public class InputPanen extends Fragment {
                                 totalton(Double.parseDouble(luastambak), Double.parseDouble(panentotal));
                                 String tonha = htotalton.getText().toString();
 
-                                datapanen(new RequestDataPanen(tanggalpanen, doc, tonase, abw, size, populasi));
+                                datapanen(new RequestDataPanen(tanggalpanen, doc, tonase, abw, size, populasi, tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
                                 updatedatapanen(new RequestUpdatePanen(tanggalpanen, doc, tonase, abw, size, populasi));
 
                                 Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();

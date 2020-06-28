@@ -3,21 +3,13 @@ package com.example.applog.Adapter;
 import java.io.Serializable;
 
 public class RequestDataPerlakuan implements Serializable {
-    private String perlakuan, tanggalperlakuan;
+    private String tanggalperlakuan, perlakuan;
 
     public RequestDataPerlakuan() {
     }
 
-    public RequestDataPerlakuan(String perlakuan, String tanggalperlakuan) {
-        this.perlakuan = perlakuan;
+    public RequestDataPerlakuan(String tanggalperlakuan, String perlakuan) {
         this.tanggalperlakuan = tanggalperlakuan;
-    }
-
-    public String getPerlakuan() {
-        return perlakuan;
-    }
-
-    public void setPerlakuan(String perlakuan) {
         this.perlakuan = perlakuan;
     }
 
@@ -29,11 +21,19 @@ public class RequestDataPerlakuan implements Serializable {
         this.tanggalperlakuan = tanggalperlakuan;
     }
 
+    public String getPerlakuan() {
+        return perlakuan;
+    }
+
+    public void setPerlakuan(String perlakuan) {
+        this.perlakuan = perlakuan;
+    }
+
     @Override
     public String toString() {
         return "RequestDataPerlakuan{" +
-                "perlakuan='" + perlakuan + '\'' +
-                ", tanggalperlakuan='" + tanggalperlakuan + '\'' +
+                "tanggalperlakuan='" + tanggalperlakuan + '\'' +
+                ", perlakuan='" + perlakuan + '\'' +
                 '}';
     }
 }

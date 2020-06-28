@@ -202,7 +202,7 @@ public class Input_Data_Kolam extends AppCompatActivity {
                 dataperlakuan(new RequestDataPerlakuan(perlakuan, tanggalperlakuan));
                 updatedataperlakuan(new RequestUpdatePerlakuan(perlakuan, tanggalperlakuan));
                 datahasilpanen(new RequestHasilPanen(tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
-                datapanen(new RequestDataPanen(tanggalpanen, doc, tonase, abw, size, populasipanen));
+                datapanen(new RequestDataPanen(tanggalpanen, doc, tonase, abw, size, populasipanen, tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
                 updatedatapanen(new RequestUpdatePanen(tanggalpanen, doc, tonase, abw, size, populasipanen));
 
                 progressDialog = new ProgressDialog(Input_Data_Kolam.this);
