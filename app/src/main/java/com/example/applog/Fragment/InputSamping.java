@@ -3,6 +3,7 @@ package com.example.applog.Fragment;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.applog.Activity.MenuInput;
 import com.example.applog.Adapter.RequestDataPakan;
 import com.example.applog.Adapter.RequestDataSampling;
 import com.example.applog.Adapter.RequestUpdatePakan;
@@ -31,14 +33,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 
 public class InputSamping extends Fragment {
     private EditText htanggal, hjumlahratarata, hmbw, hpakanhari, hpakantotal, hfr;
-    private TextView hpopulasi, hadgmingguan, hbiomass, hsp, hkonsumsifeed, hfcr, hmbwlama;
+    private TextView hpopulasi, hadgmingguan, hbiomass, hsp, hkonsumsifeed, hfcr, hmbwlama, pancingan;
     private Button simpan;
     private DatabaseReference mDatabase;
     SharePreferences sessions;
@@ -71,6 +76,7 @@ public class InputSamping extends Fragment {
         hkonsumsifeed = (TextView)view.findViewById(R.id.ifeed);
         hfcr = (TextView)view.findViewById(R.id.ifcr);
         hmbwlama =(TextView)view.findViewById(R.id.imbwlama);
+        pancingan = (TextView)view.findViewById(R.id.pancingsampling);
         simpan = (Button)view.findViewById(R.id.buttonsimpansampling);
         mDatabase.child("Data User").child(user.getDisplayName()).child("Database")
                 .child(sessions.getData()).child("UpdateSampling").addValueEventListener(new ValueEventListener() {
@@ -79,6 +85,19 @@ public class InputSamping extends Fragment {
                 RequestUpdateSampling requestUpdateSampling = dataSnapshot.getValue(RequestUpdateSampling.class);
                 String ambilmbw = requestUpdateSampling.getMbw();
                 hmbwlama.setText(ambilmbw);
+                String datatanggal = requestUpdateSampling.getTanggalsampling();
+                String inputantanggal = htanggal.getText().toString();
+
+                DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+                try {
+                    Date tglawal = (Date) date.parse(inputantanggal);
+                    Date tglakhir = (Date) date.parse(datatanggal);
+                    long bedaHari = Math.abs(tglawal.getTime() - tglakhir.getTime());
+                    pancingan.setText(TimeUnit.MILLISECONDS.toDays(bedaHari) +"");
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
@@ -88,54 +107,93 @@ public class InputSamping extends Fragment {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                final String tanggalsampling = htanggal.getText().toString();
-                final String jumlahtebarsamplings = hjumlahratarata.getText().toString();
-                final String mbw = hmbw.getText().toString();
-                final String pakanseharisampling = hpakanhari.getText().toString();
-                final String totalpakansampling = hpakantotal.getText().toString();
-                final String fr = hfr.getText().toString();
+                int data = Integer.parseInt(pancingan.getText().toString());
+                if (data == 0){
+                    AlertDialog.Builder alertDialogB = new AlertDialog.Builder(v.getContext());
+                    alertDialogB.setTitle("Pemberitahuan");
+                    alertDialogB.setMessage("Data sudah ditambahkan hari ini")
+                            .setCancelable(false)
+                            .setPositiveButton("YA", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent i = new Intent(getContext(), MenuInput.class);
+                                    startActivity(i);
 
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
-                alertDialogBuilder.setTitle("Pemberitahuan");
-                alertDialogBuilder.setMessage("Yakin untuk menyimpan data?")
-                        .setCancelable(false)
-                        .setPositiveButton("YA", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                hitungbiomass(Double.parseDouble(pakanseharisampling), Double.parseDouble(fr));
-                                String biomass = hbiomass.getText().toString();
-                                hitungpopulasi(Double.parseDouble(mbw), Double.parseDouble(biomass));
-                                String populasi = hpopulasi.getText().toString();
-                                hitungsp(Double.parseDouble(populasi), Double.parseDouble(jumlahtebarsamplings));
-                                String sp = hsp.getText().toString();
-                                hitungkonsumsifeed(Double.parseDouble(mbw), Double.parseDouble(fr), Double.parseDouble(jumlahtebarsamplings));
-                                String konsumsifeed = hkonsumsifeed.getText().toString();
-                                hitungfcr(Double.parseDouble(totalpakansampling), Double.parseDouble(biomass));
-                                String fcr = hfcr.getText().toString();
-                                String lamambw = hmbwlama.getText().toString();
-                                hitungadg(Double.parseDouble(mbw), Double.parseDouble(lamambw));
-                                String adgmingguan = hadgmingguan.getText().toString();
-                                String usia = sessions.getUsia();
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogB.create();
+                    alertDialog.show();
+                }
+                else {
+                    final String tanggalsampling = htanggal.getText().toString();
+                    String jumlahtebarsamplings = hjumlahratarata.getText().toString();
+                    if (jumlahtebarsamplings.equals("")){
+                        jumlahtebarsamplings = "0.0";
+                    }
+                    String mbw = hmbw.getText().toString();
+                    if (mbw.equals("")){
+                        mbw = "0.0";
+                    }
+                    String pakanseharisampling = hpakanhari.getText().toString();
+                    if (pakanseharisampling.equals("")){
+                        pakanseharisampling = "0.0";
+                    }
+                    String totalpakansampling = hpakantotal.getText().toString();
+                    if (totalpakansampling.equals("")){
+                        totalpakansampling = "0.0";
+                    }
+                    String fr = hfr.getText().toString();
+                    if (fr.equals("")){
+                        fr = "0.0";
+                    }
 
-                                datasampling(new RequestDataSampling(tanggalsampling, jumlahtebarsamplings,mbw, pakanseharisampling, totalpakansampling, fr, populasi, adgmingguan, biomass, sp, konsumsifeed, fcr, usia));
-                                updatedatasampling(new RequestUpdateSampling(tanggalsampling, jumlahtebarsamplings,mbw, pakanseharisampling, totalpakansampling, fr, populasi, adgmingguan, biomass, sp, konsumsifeed, fcr));
-                                hjumlahratarata.setText("0.0");
-                                hmbw.setText("0.0");
-                                hpakanhari.setText("0.0");
-                                hpakantotal.setText("0.0");
-                                hfr.setText("0.0");
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
+                    alertDialogBuilder.setTitle("Pemberitahuan");
+                    final String finalPakanseharisampling = pakanseharisampling;
+                    final String finalMbw = mbw;
+                    final String finalJumlahtebarsamplings = jumlahtebarsamplings;
+                    final String finalFr = fr;
+                    final String finalTotalpakansampling = totalpakansampling;
+                    alertDialogBuilder.setMessage("Yakin untuk menyimpan data?")
+                            .setCancelable(false)
+                            .setPositiveButton("YA", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    hitungbiomass(Double.parseDouble(finalPakanseharisampling), Double.parseDouble(finalFr));
+                                    String biomass = hbiomass.getText().toString();
+                                    hitungpopulasi(Double.parseDouble(finalMbw), Double.parseDouble(biomass));
+                                    String populasi = hpopulasi.getText().toString();
+                                    hitungsp(Double.parseDouble(populasi), Double.parseDouble(finalJumlahtebarsamplings));
+                                    String sp = hsp.getText().toString();
+                                    hitungkonsumsifeed(Double.parseDouble(finalMbw), Double.parseDouble(finalFr), Double.parseDouble(finalJumlahtebarsamplings));
+                                    String konsumsifeed = hkonsumsifeed.getText().toString();
+                                    hitungfcr(Double.parseDouble(finalTotalpakansampling), Double.parseDouble(biomass));
+                                    String fcr = hfcr.getText().toString();
+                                    String lamambw = hmbwlama.getText().toString();
+                                    hitungadg(Double.parseDouble(finalMbw), Double.parseDouble(lamambw));
+                                    String adgmingguan = hadgmingguan.getText().toString();
+                                    String usia = sessions.getUsia();
 
-                                Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                                    datasampling(new RequestDataSampling(tanggalsampling, finalJumlahtebarsamplings, finalMbw, finalPakanseharisampling, finalTotalpakansampling, finalFr, populasi, adgmingguan, biomass, sp, konsumsifeed, fcr, usia));
+                                    updatedatasampling(new RequestUpdateSampling(tanggalsampling, finalJumlahtebarsamplings, finalMbw, finalPakanseharisampling, finalTotalpakansampling, finalFr, populasi, adgmingguan, biomass, sp, konsumsifeed, fcr));
+                                    hjumlahratarata.setText("");
+                                    hmbw.setText("");
+                                    hpakanhari.setText("");
+                                    hpakantotal.setText("");
+                                    hfr.setText("");
 
-                            }
-                        });
-                AlertDialog alertDialog=alertDialogBuilder.create();
-                alertDialog.show();
+                                    Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogBuilder.create();
+                    alertDialog.show();
+                }
             }
         });
 

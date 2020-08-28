@@ -1,4 +1,0 @@
-#Sat Jun 27 19:52:02 ICT 2020
-base.0=D\:\\AppLog2\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

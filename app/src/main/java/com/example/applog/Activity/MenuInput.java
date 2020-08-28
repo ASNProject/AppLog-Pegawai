@@ -8,10 +8,18 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.applog.Adapter.RequestUpdateAir;
+import com.example.applog.Adapter.RequestUpdatePakan;
+import com.example.applog.Adapter.RequestUpdatePanen;
+import com.example.applog.Adapter.RequestUpdatePerlakuan;
+import com.example.applog.Adapter.RequestUpdateSampling;
 import com.example.applog.Adapter.Request_Data_Kolam;
 import com.example.applog.Adapter.Request_Register;
 import com.example.applog.R;
@@ -31,11 +39,11 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class MenuInput extends AppCompatActivity {
-    private TextView namakolams, lokasi, tanggaltebar, usia, jumlahtebar, jumlahtebarsampling, luasarea
-            ,kepadatan, keterangan;
+public class MenuInput extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+    private TextView namakolams, lokasi, tanggaltebar, usia, jumlahtebar, jumlahtebarsampling, luasarea, kepadatan, keterangan, aktual, edit, tupdatea, tupdateb, tupdatec, tupdated;
     private CardView kualitasair, pakan, panen, sampling, perlakuan;
     private DatabaseReference mDatabase, mDatabase1;
+    private ImageView camera, pilmenu;
     SharePreferences sessions;
     private FirebaseAuth mAuth;
     ProgressDialog progressDialog;
@@ -65,6 +73,14 @@ public class MenuInput extends AppCompatActivity {
         sampling = findViewById(R.id.cardview6);
         panen = findViewById(R.id.cardview7);
         perlakuan = findViewById(R.id.cardview8);
+        aktual = findViewById(R.id.okepadatanaktual);
+        edit = findViewById(R.id.editkolam);
+        tupdatea = findViewById(R.id.terakhirupdate);
+        tupdateb = findViewById(R.id.terakhirupdateb);
+        tupdatec = findViewById(R.id.terakhirupdatec);
+        tupdated = findViewById(R.id.terakhirupdated);
+        camera = findViewById(R.id.camera1);
+        pilmenu = findViewById(R.id.menu);
 
         tampilmenudata();
         lokasi();
@@ -73,20 +89,48 @@ public class MenuInput extends AppCompatActivity {
         inputsampling();
         inputpanen();
         inputperlakuan();
+        editkolam();
+        update1();
+        update2();
+        update3();
+        update4();
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(MenuInput.this, v);
+                popupMenu.setOnMenuItemClickListener(MenuInput.this);
+                popupMenu.inflate(R.menu.popupcamera);
+                popupMenu.show();
+            }
+        });
+        pilmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu1 = new PopupMenu(MenuInput.this, v);
+                popupMenu1.setOnMenuItemClickListener(MenuInput.this);
+                popupMenu1.inflate(R.menu.menu);
+                popupMenu1.show();
+            }
+        });
 
     }
-    private void tampilmenudata(){
+
+    private void tampilmenudata() {
         FirebaseUser user = mAuth.getCurrentUser();
         mDatabase.child("Data User").child(user.getDisplayName()).child("Database")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        Request_Data_Kolam request_data_kolam= dataSnapshot.child(sessions.getData()).getValue(Request_Data_Kolam.class);
+                        Request_Data_Kolam request_data_kolam = dataSnapshot.child(sessions.getData()).getValue(Request_Data_Kolam.class);
                         tanggaltebar.setText(request_data_kolam.getTanggaltebar());
                         jumlahtebar.setText(request_data_kolam.getJumlahtebarekor());
                         jumlahtebarsampling.setText(request_data_kolam.getJumlahtebarsampling());
                         luasarea.setText(request_data_kolam.getLuasarea());
-                        kepadatan.setText(request_data_kolam.getKepadatankolam());
+                        double padat = Double.parseDouble(request_data_kolam.getKepadatankolam());
+                        double aktuals = Double.parseDouble(request_data_kolam.getKepadatanaktual());
+                        kepadatan.setText(String.format("%.3f", padat));
+                        kepadatan.setText(String.format("%.3f", padat));
+                        aktual.setText(String.format("%.3f", aktuals));
                         String tanggal = tanggaltebar.getText().toString();
                         String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
                         DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
@@ -95,7 +139,7 @@ public class MenuInput extends AppCompatActivity {
                             Date tglakhir = (Date) date.parse(tanggal);
 
                             long bedaHari = Math.abs(tglawal.getTime() - tglakhir.getTime());
-                            usia.setText(TimeUnit.MILLISECONDS.toDays(bedaHari) +"");
+                            usia.setText(TimeUnit.MILLISECONDS.toDays(bedaHari) + "");
                         } catch (ParseException e) {
                             e.printStackTrace();
                         }
@@ -107,7 +151,8 @@ public class MenuInput extends AppCompatActivity {
                     }
                 });
     }
-    private void lokasi(){
+
+    private void lokasi() {
         FirebaseUser user = mAuth.getCurrentUser();
         mDatabase1 = FirebaseDatabase.getInstance().getReference();
         mDatabase1.child("Data User").child(user.getDisplayName()).addValueEventListener(new ValueEventListener() {
@@ -124,6 +169,74 @@ public class MenuInput extends AppCompatActivity {
         });
     }
 
+    private void update1() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        mDatabase.child("Data User").child(user.getDisplayName()).child("Database").child(sessions.getData()).child("UpdateAir")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        RequestUpdateAir requestUpdateAir = dataSnapshot.getValue(RequestUpdateAir.class);
+                        tupdatea.setText(requestUpdateAir.getTanggalair());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void update2() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        mDatabase.child("Data User").child(user.getDisplayName()).child("Database").child(sessions.getData()).child("UpdatePakan")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        RequestUpdatePakan requestUpdatePakan = dataSnapshot.getValue(RequestUpdatePakan.class);
+                        tupdateb.setText(requestUpdatePakan.getTanggalpakan());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void update3() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        mDatabase.child("Data User").child(user.getDisplayName()).child("Database").child(sessions.getData()).child("UpdateSampling")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        RequestUpdateSampling requestUpdateSampling = dataSnapshot.getValue(RequestUpdateSampling.class);
+                        tupdatec.setText(requestUpdateSampling.getTanggalsampling());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void update4() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        mDatabase.child("Data User").child(user.getDisplayName()).child("Database").child(sessions.getData()).child("UpdatePanen")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        RequestUpdatePanen requestUpdatePanen = dataSnapshot.getValue(RequestUpdatePanen.class);
+                        tupdated.setText(requestUpdatePanen.getUtanggalpanen());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
     @Override
     public void onBackPressed() {
         Intent i = new Intent(MenuInput.this, Dashboard.class);
@@ -131,7 +244,7 @@ public class MenuInput extends AppCompatActivity {
         finish();
     }
 
-    private void inputair(){
+    private void inputair() {
         kualitasair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,7 +254,8 @@ public class MenuInput extends AppCompatActivity {
             }
         });
     }
-    private void inputpakan(){
+
+    private void inputpakan() {
         pakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,7 +265,8 @@ public class MenuInput extends AppCompatActivity {
             }
         });
     }
-    private void inputsampling(){
+
+    private void inputsampling() {
         sampling.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,7 +276,8 @@ public class MenuInput extends AppCompatActivity {
             }
         });
     }
-    private void inputpanen(){
+
+    private void inputpanen() {
         panen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +286,8 @@ public class MenuInput extends AppCompatActivity {
             }
         });
     }
-    private void inputperlakuan(){
+
+    private void inputperlakuan() {
         perlakuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,5 +295,44 @@ public class MenuInput extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private void editkolam() {
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuInput.this, EditKolam.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu1:
+                Intent i = new Intent(MenuInput.this, Camera.class);
+                startActivity(i);
+                break;
+            case R.id.menu2:
+                Toast.makeText(getApplicationContext(), "Menu Lihat Gambar dipilih", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.menua1:
+                Toast.makeText(getApplicationContext(), "Menu Profil dipilih", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.menua2:
+                Intent menu2 = new Intent(MenuInput.this, Dashboard.class);
+                startActivity(menu2);
+                finish();
+                break;
+            case R.id.menua3:
+                Intent menu3 = new Intent(MenuInput.this, TentangAplikasi.class);
+                startActivity(menu3);
+                break;
+            case R.id.menua4:
+                finish();
+                break;
+        }
+        return true;
     }
 }

@@ -5,12 +5,12 @@ import java.io.Serializable;
 public class Request_Data_Kolam implements Serializable {
     private String tanggaltebar, namakolam, namapetani,
                     luasarea, jumlahtebarekor, jumlahtebarsampling, kepadatankolam,
-                    feedkolam, keterangankolam;
+                    feedkolam, keterangankolam, kepadatanaktual;
 
     public Request_Data_Kolam() {
     }
 
-    public Request_Data_Kolam(String tanggaltebar, String namakolam, String namapetani, String luasarea, String jumlahtebarekor, String jumlahtebarsampling, String kepadatankolam, String feedkolam, String keterangankolam) {
+    public Request_Data_Kolam(String tanggaltebar, String namakolam, String namapetani, String luasarea, String jumlahtebarekor, String jumlahtebarsampling, String kepadatankolam, String feedkolam, String keterangankolam, String kepadatanaktual) {
         this.tanggaltebar = tanggaltebar;
         this.namakolam = namakolam;
         this.namapetani = namapetani;
@@ -20,6 +20,7 @@ public class Request_Data_Kolam implements Serializable {
         this.kepadatankolam = kepadatankolam;
         this.feedkolam = feedkolam;
         this.keterangankolam = keterangankolam;
+        this.kepadatanaktual = kepadatanaktual;
     }
 
     public String getTanggaltebar() {
@@ -94,6 +95,14 @@ public class Request_Data_Kolam implements Serializable {
         this.keterangankolam = keterangankolam;
     }
 
+    public String getKepadatanaktual() {
+        return kepadatanaktual;
+    }
+
+    public void setKepadatanaktual(String kepadatanaktual) {
+        this.kepadatanaktual = kepadatanaktual;
+    }
+
     @Override
     public String toString() {
         return "Request_Data_Kolam{" +
@@ -106,6 +115,7 @@ public class Request_Data_Kolam implements Serializable {
                 ", kepadatankolam='" + kepadatankolam + '\'' +
                 ", feedkolam='" + feedkolam + '\'' +
                 ", keterangankolam='" + keterangankolam + '\'' +
+                ", kepadatanaktual='" + kepadatanaktual + '\'' +
                 '}';
     }
 }

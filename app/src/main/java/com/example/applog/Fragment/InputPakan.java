@@ -32,14 +32,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class InputPakan extends Fragment {
     private EditText tanggalpakan, kodepakan, jam6, jam10, jam14, jam18, jam22, keteranganpakan;
     private String jumlahharian, jumlahtotal, usia;
-    private TextView jumlah, totals, ambil;
+    private TextView jumlah, totals, ambil, pancingan;
     private Button simpanpakan;
     private DatabaseReference mDatabase;
     SharePreferences sessions;
@@ -69,6 +72,7 @@ public class InputPakan extends Fragment {
         ambil = (TextView) view.findViewById(R.id.ambiltotal);
         jumlah = (TextView)view.findViewById(R.id.jumlahharian);
         totals = (TextView)view.findViewById(R.id.jumlahtotal);
+        pancingan = (TextView)view.findViewById(R.id.pancingpakan);
 
         mDatabase.child("Data User").child(user.getDisplayName()).child("Database")
                 .child(sessions.getData()).child("UpdatePakan").addValueEventListener(new ValueEventListener() {
@@ -77,6 +81,19 @@ public class InputPakan extends Fragment {
                 RequestUpdatePakan requestUpdatePakan = dataSnapshot.getValue(RequestUpdatePakan.class);
                 String ambiltotal = requestUpdatePakan.getJumlahtotal();
                 ambil.setText(ambiltotal);
+                String datatanggal = requestUpdatePakan.getTanggalpakan();
+                String inputantanggal = tanggalpakan.getText().toString();
+
+                DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+                try {
+                    Date tglawal = (Date) date.parse(inputantanggal);
+                    Date tglakhir = (Date) date.parse(datatanggal);
+                    long bedaHari = Math.abs(tglawal.getTime() - tglakhir.getTime());
+                    pancingan.setText(TimeUnit.MILLISECONDS.toDays(bedaHari) +"");
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
 
             }
@@ -89,51 +106,90 @@ public class InputPakan extends Fragment {
         simpanpakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                final String htanggalpakan = tanggalpakan.getText().toString();
-                final String hkodepakan = kodepakan.getText().toString();
-                final String hjam6 = jam6.getText().toString();
-                final String hjam10 = jam10.getText().toString();
-                final String hjam14 = jam14.getText().toString();
-                final String hjam18 = jam18.getText().toString();
-                final String hjam22 = jam22.getText().toString();
-                final String hketeranngan = keteranganpakan.getText().toString();
+                int data = Integer.parseInt(pancingan.getText().toString());
+                if (data == 0){
+                    AlertDialog.Builder alertDialogB = new AlertDialog.Builder(v.getContext());
+                    alertDialogB.setTitle("Pemberitahuan");
+                    alertDialogB.setMessage("Data sudah ditambahkan hari ini")
+                            .setCancelable(false)
+                            .setPositiveButton("YA", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent i = new Intent(getContext(), MenuInput.class);
+                                    startActivity(i);
 
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
-                alertDialogBuilder.setTitle("Pemberitahuan");
-                alertDialogBuilder.setMessage("Simpan penambahan data?")
-                        .setCancelable(false)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                String usia = sessions.getUsia();
-                                String ambildata = ambil.getText().toString();
-                                hitung3(Double.parseDouble(hjam6), Double.parseDouble(hjam10), Double.parseDouble(hjam14), Double.parseDouble(hjam18), Double.parseDouble(hjam22));
-                                String jumlahharian = jumlah.getText().toString();
-                                hitung4(Double.parseDouble(jumlahharian), Double.parseDouble(ambildata));
-                                String jumlahtotal = totals.getText().toString();
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogB.create();
+                    alertDialog.show();
+                }
+                else {
+                    final String htanggalpakan = tanggalpakan.getText().toString();
+                    final String hkodepakan = kodepakan.getText().toString();
+                    String hjam6 = jam6.getText().toString();
+                    if (hjam6.equals("")){
+                        hjam6 = "0.0";
+                    }
+                    String hjam10 = jam10.getText().toString();
+                    if (hjam10.equals("")){
+                        hjam10 = "0.0";
+                    }
+                    String hjam14 = jam14.getText().toString();
+                    if (hjam14.equals("")){
+                        hjam14 = "0.0";
+                    }
+                    String hjam18 = jam18.getText().toString();
+                    if (hjam18.equals("")){
+                        hjam18 = "0.0";
+                    }
+                    String hjam22 = jam22.getText().toString();
+                    if (hjam22.equals("")){
+                        hjam22 = "0.0";
+                    }
+                    final String hketeranngan = keteranganpakan.getText().toString();
 
-                                datapakan(new RequestDataPakan(htanggalpakan, hkodepakan, hjam6, hjam10, hjam14, hjam18, hjam22, jumlahharian, jumlahtotal, hketeranngan, usia));
-                                updatedatapakan(new RequestUpdatePakan(htanggalpakan, hkodepakan, hjam6, hjam10, hjam14, hjam18, hjam22, jumlahharian, jumlahtotal, hketeranngan, usia));
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
+                    alertDialogBuilder.setTitle("Pemberitahuan");
+                    final String finalHjam = hjam6;
+                    final String finalHjam1 = hjam10;
+                    final String finalHjam11 = hjam14;
+                    final String finalHjam12 = hjam18;
+                    final String finalHjam2 = hjam22;
+                    alertDialogBuilder.setMessage("Simpan penambahan data?")
+                            .setCancelable(false)
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    String usia = sessions.getUsia();
+                                    String ambildata = ambil.getText().toString();
+                                    hitung3(Double.parseDouble(finalHjam), Double.parseDouble(finalHjam1), Double.parseDouble(finalHjam11), Double.parseDouble(finalHjam12), Double.parseDouble(finalHjam2));
+                                    String jumlahharian = jumlah.getText().toString();
+                                    hitung4(Double.parseDouble(jumlahharian), Double.parseDouble(ambildata));
+                                    String jumlahtotal = totals.getText().toString();
 
-                              kodepakan.setText("");
-                              jam6.setText("0.0");
-                                jam10.setText("0.0");
-                                jam14.setText("0.0");
-                                jam18.setText("0.0");
-                                jam22.setText("0.0");
-                                keteranganpakan.setText("");
+                                    datapakan(new RequestDataPakan(htanggalpakan, hkodepakan, finalHjam, finalHjam1, finalHjam11, finalHjam12, finalHjam2, jumlahharian, jumlahtotal, hketeranngan, usia));
+                                    updatedatapakan(new RequestUpdatePakan(htanggalpakan, hkodepakan, finalHjam, finalHjam1, finalHjam11, finalHjam12, finalHjam2, jumlahharian, jumlahtotal, hketeranngan, usia));
 
-                                Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                                    kodepakan.setText("");
+                                    jam6.setText("");
+                                    jam10.setText("");
+                                    jam14.setText("");
+                                    jam18.setText("");
+                                    jam22.setText("");
+                                    keteranganpakan.setText("");
 
-                            }
-                        });
-                AlertDialog alertDialog=alertDialogBuilder.create();
-                alertDialog.show();
+                                    Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogBuilder.create();
+                    alertDialog.show();
+                }
             }
         });
 

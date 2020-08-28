@@ -31,8 +31,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_toStartOf="@+id/delete"
-            android:layout_toLeftOf="@+id/delete"
             android:drawableLeft="@drawable/ic_edit_black_24dp"
             android:text="Edit"
             android:textColor="@color/birumandantua"></TextView>

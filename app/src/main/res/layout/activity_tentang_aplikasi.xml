@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TentangAplikasi">
+    
+    <TextView
+        android:id="@+id/text31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentang Aplikasi"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        ></TextView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text31"
+        android:text="Aplikasi ini adalah sebuah aplikasi untuk melaporkan data harian dari tambak udang disuatu tambak. Aplikasi ini berjalan dengan realtime dan dapat disinkronasi secara otomatis sehingga dapat dilihat oleh pegawai dan pemilik tambak. "
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="Aplikasi Pegawai V.1.0\n ASNProject/ADI\n Created by Arief Setyo Nugroho\n Email: asnproject02@gmail.com"
+        android:textAlignment="center"
+        android:textStyle="bold"></TextView>
+
+</RelativeLayout>

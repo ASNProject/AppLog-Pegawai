@@ -34,7 +34,7 @@ public class PostAdapterPerlakuan extends FirebaseRecyclerAdapter<RequestDataPer
 
     @Override
     protected void onBindViewHolder(@NonNull PostViewHolder postViewHolder, final int i, @NonNull RequestDataPerlakuan requestDataPerlakuan) {
-        postViewHolder.tanggalperlakuan.setText(requestDataPerlakuan.getTanggalperlakuan());
+       /* postViewHolder.tanggalperlakuan.setText(requestDataPerlakuan.getTanggalperlakuan());
         postViewHolder.perlakuan.setText(requestDataPerlakuan.getPerlakuan());
         postViewHolder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +73,7 @@ public class PostAdapterPerlakuan extends FirebaseRecyclerAdapter<RequestDataPer
                 alertDialog.show();
 
             }
-        });
+        });*/
     }
 
     @NonNull

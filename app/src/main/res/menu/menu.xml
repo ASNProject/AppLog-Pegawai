@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menua1"
+        android:title="Profil"></item>
+    <item android:id="@+id/menua2"
+        android:title="Pilih Kolam"></item>
+    <item android:id="@+id/menua3"
+        android:title="Tentang Aplikasi"></item>
+    <item android:id="@+id/menua4"
+        android:title="Keluar"></item>
+
+</menu>

@@ -50,8 +50,7 @@
                 <EditText
                     android:id="@+id/idoc"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0.0"></EditText>
+                    android:layout_height="wrap_content"></EditText>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -70,8 +69,7 @@
                 <EditText
                     android:id="@+id/itonanse"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0.0"></EditText>
+                    android:layout_height="wrap_content"></EditText>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -90,8 +88,7 @@
                 <EditText
                     android:id="@+id/iabw"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0.0"></EditText>
+                    android:layout_height="wrap_content"></EditText>
             </LinearLayout>
 
             <Button
@@ -159,6 +156,11 @@
                 android:id="@+id/iapakanpanen"
                 android:layout_width="0dp"
                 android:layout_height="0dp"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/pancingpanen"
+                ></TextView>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

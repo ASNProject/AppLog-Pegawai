@@ -72,7 +72,6 @@
                     android:id="@+id/ijam6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
                     ></EditText>
             </LinearLayout>
             <LinearLayout
@@ -93,7 +92,6 @@
                     android:id="@+id/ijam10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
                     ></EditText>
             </LinearLayout>
             <LinearLayout
@@ -114,7 +112,6 @@
                     android:id="@+id/ijam14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
                     ></EditText>
             </LinearLayout>
             <LinearLayout
@@ -135,7 +132,6 @@
                     android:id="@+id/ijam18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
                     ></EditText>
             </LinearLayout>
             <LinearLayout
@@ -156,7 +152,6 @@
                     android:id="@+id/ijam22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
                     ></EditText>
             </LinearLayout>
             <LinearLayout
@@ -212,6 +207,11 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:id="@+id/ambiltotal"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/pancingpakan"
+                ></TextView>
         </LinearLayout>
 
 

@@ -3,6 +3,13 @@
     <string name="title_activity_input_kualitas_air">InputKualitasAir</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string-array name="waktu">
+        <item>Pagi</item>
+        <item>Siang</item>
+        <item>Sore</item>
+    </string-array>
+    <string name="permission_dialog">Accessing Location Permissions required</string>
+    <string name="go_to_permissions_settings">Go to App settings and enable permissions</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -3,6 +3,7 @@ package com.example.applog.Fragment;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.applog.Activity.MenuInput;
 import com.example.applog.Adapter.RequestDataPakan;
 import com.example.applog.Adapter.RequestDataPanen;
 import com.example.applog.Adapter.RequestHasilPanen;
@@ -33,16 +35,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class InputPanen extends Fragment {
     private EditText htanggal, hdoc, htonase, habw;
     private Button simpan;
     private TextView hpopulasipanen, hsize, htotalpanen, htotalpopulasi,
             htotalsr, htotalfcrpanen, htotalton, ambiltonase, ambilpopulasi,
-            ambilluastambak, ambilpakan, pakanpanen;
+            ambilluastambak, ambilpakan, pakanpanen, pancingan;
     private DatabaseReference mDatabase;
     SharePreferences sessions;
     private FirebaseAuth mAuth;
@@ -76,6 +81,7 @@ public class InputPanen extends Fragment {
         ambilluastambak = (TextView) view.findViewById(R.id.ialuastambak);
         ambilpakan = (TextView) view.findViewById(R.id.iapakan);
         pakanpanen = (TextView) view.findViewById(R.id.iapakanpanen);
+        pancingan = (TextView)view.findViewById(R.id.pancingpanen);
 
         simpan = (Button)view.findViewById(R.id.buttonsimpanpanen);
         mDatabase.child("Data User").child(user.getDisplayName()).child("Database")
@@ -116,59 +122,115 @@ public class InputPanen extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
+        mDatabase.child("Data User").child(user.getDisplayName()).child("Database")
+                .child(sessions.getData()).child("UpdatePanen").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                RequestUpdatePanen requestUpdatePanen = dataSnapshot.getValue(RequestUpdatePanen.class);
+                String datatanggal = requestUpdatePanen.getUtanggalpanen();
+                String inputantanggal = htanggal.getText().toString();
+
+                DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+                try {
+                    Date tglawal = (Date) date.parse(inputantanggal);
+                    Date tglakhir = (Date) date.parse(datatanggal);
+                    long bedaHari = Math.abs(tglawal.getTime() - tglakhir.getTime());
+                    pancingan.setText(TimeUnit.MILLISECONDS.toDays(bedaHari) +"");
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                final String tanggalpanen = htanggal.getText().toString();
-                final String doc = hdoc.getText().toString();
-                final String tonase = htonase.getText().toString();
-                final String abw = habw.getText().toString();
-                size(Double.parseDouble(abw));
-                final String size = hsize.getText().toString();
-                populasi(Double.parseDouble(abw), Double.parseDouble(tonase));
-                final String populasi = hpopulasipanen.getText().toString();
+                int data = Integer.parseInt(pancingan.getText().toString());
+                if (data == 0){
+                    AlertDialog.Builder alertDialogB = new AlertDialog.Builder(v.getContext());
+                    alertDialogB.setTitle("Pemberitahuan");
+                    alertDialogB.setMessage("Data sudah ditambahkan hari ini")
+                            .setCancelable(false)
+                            .setPositiveButton("YA", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent i = new Intent(getContext(), MenuInput.class);
+                                    startActivity(i);
 
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
-                alertDialogBuilder.setTitle("Pemberitahuan");
-                alertDialogBuilder.setMessage("Yakin untuk menyimpan data?")
-                        .setCancelable(false)
-                        .setPositiveButton("YA", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                String totalpakan = pakanpanen.getText().toString();
-                                String atonase = ambiltonase.getText().toString();
-                                String apopulasi = ambilpopulasi.getText().toString();
-                                String jumlahtebar = ambilpakan.getText().toString();
-                                String luastambak = ambilluastambak.getText().toString();
-                                totalpanen(Double.parseDouble(atonase), Double.parseDouble(tonase));
-                                String panentotal = htotalpanen.getText().toString();
-                                totalpopulasi(Double.parseDouble(apopulasi), Double.parseDouble(populasi));
-                                String totalpopulasi = htotalpopulasi.getText().toString();
-                                totalsr(Double.parseDouble(jumlahtebar), Double.parseDouble(totalpopulasi));
-                                String totalsr = htotalsr.getText().toString();
-                                totalfcr(Double.parseDouble(totalpakan), Double.parseDouble(panentotal));
-                                String fcrtotal = htotalfcrpanen.getText().toString();
-                                totalton(Double.parseDouble(luastambak), Double.parseDouble(panentotal));
-                                String tonha = htotalton.getText().toString();
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogB.create();
+                    alertDialog.show();
+                }
+                else {
+                    final String tanggalpanen = htanggal.getText().toString();
+                    String doc = hdoc.getText().toString();
+                    if (doc.equals("")){
+                        doc = "0.0";
+                    }
+                    String tonase = htonase.getText().toString();
+                    if (tonase.equals("")){
+                        tonase = "0.0";
+                    }
+                    String abw = habw.getText().toString();
+                    if (abw.equals("")){
+                        abw = "0.0";
+                    }
+                    size(Double.parseDouble(abw));
+                    final String size = hsize.getText().toString();
+                    populasi(Double.parseDouble(abw), Double.parseDouble(tonase));
+                    final String populasi = hpopulasipanen.getText().toString();
 
-                                datapanen(new RequestDataPanen(tanggalpanen, doc, tonase, abw, size, populasi, tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
-                                updatedatapanen(new RequestUpdatePanen(tanggalpanen, doc, tonase, abw, size, populasi));
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
+                    alertDialogBuilder.setTitle("Pemberitahuan");
+                    final String finalTonase = tonase;
+                    final String finalDoc = doc;
+                    final String finalAbw = abw;
+                    alertDialogBuilder.setMessage("Yakin untuk menyimpan data?")
+                            .setCancelable(false)
+                            .setPositiveButton("YA", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    String totalpakan = pakanpanen.getText().toString();
+                                    String atonase = ambiltonase.getText().toString();
+                                    String apopulasi = ambilpopulasi.getText().toString();
+                                    String jumlahtebar = ambilpakan.getText().toString();
+                                    String luastambak = ambilluastambak.getText().toString();
+                                    totalpanen(Double.parseDouble(atonase), Double.parseDouble(finalTonase));
+                                    String panentotal = htotalpanen.getText().toString();
+                                    totalpopulasi(Double.parseDouble(apopulasi), Double.parseDouble(populasi));
+                                    String totalpopulasi = htotalpopulasi.getText().toString();
+                                    totalsr(Double.parseDouble(jumlahtebar), Double.parseDouble(totalpopulasi));
+                                    String totalsr = htotalsr.getText().toString();
+                                    totalfcr(Double.parseDouble(totalpakan), Double.parseDouble(panentotal));
+                                    String fcrtotal = htotalfcrpanen.getText().toString();
+                                    totalton(Double.parseDouble(luastambak), Double.parseDouble(panentotal));
+                                    String tonha = htotalton.getText().toString();
 
-                                Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
-                                updatehasilpanen(new RequestHasilPanen(tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
-                                hdoc.setText("0.0");
-                                htonase.setText("0.0");
-                                habw.setText("0.0");
-                            }
-                        })
-                        .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                                    datapanen(new RequestDataPanen(tanggalpanen, finalDoc, finalTonase, finalAbw, size, populasi, tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
+                                    updatedatapanen(new RequestUpdatePanen(tanggalpanen, finalDoc, finalTonase, finalAbw, size, populasi));
 
-                            }
-                        });
-                AlertDialog alertDialog=alertDialogBuilder.create();
-                alertDialog.show();
+                                    Toast.makeText(v.getContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT).show();
+                                    updatehasilpanen(new RequestHasilPanen(tonha, totalpopulasi, panentotal, totalsr, totalpakan, fcrtotal));
+                                    hdoc.setText("");
+                                    htonase.setText("");
+                                    habw.setText("");
+                                }
+                            })
+                            .setNegativeButton("TIDAK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    AlertDialog alertDialog=alertDialogBuilder.create();
+                    alertDialog.show();
+                }
             }
         });
 

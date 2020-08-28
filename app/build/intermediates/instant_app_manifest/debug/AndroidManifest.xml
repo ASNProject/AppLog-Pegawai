@@ -15,6 +15,10 @@
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -23,27 +27,40 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.applog.Activity.TentangAplikasi" />
+        <activity android:name="com.example.applog.Activity.Camera" />
+        <activity android:name="com.example.applog.Activity.EditKolam" />
         <activity android:name="com.example.applog.Activity.DataPerlakuan" />
         <activity android:name="com.example.applog.Activity.DataPanen" />
         <activity android:name="com.example.applog.Activity.DataSampling" />
-        <activity android:name="com.example.applog.Activity.DataPakan" />
         <activity android:name="com.example.applog.Activity.DataAir" />
+        <activity android:name="com.example.applog.Activity.DataPakan" />
         <activity android:name="com.example.applog.Fragment.DetailAir" />
         <activity android:name="com.example.applog.Fragment.InputDataAir" />
-        <activity android:name="com.example.applog.Activity.MenuInput" />
+        <activity android:name="com.example.applog.Activity.Login" />
         <activity android:name="com.example.applog.Activity.Input_Data_Kolam" />
         <activity android:name="com.example.applog.Activity.Dashboard" />
         <activity android:name="com.example.applog.Activity.Register" />
         <activity android:name="com.example.applog.MainActivity" />
-        <activity android:name="com.example.applog.Activity.Login" >
+        <activity android:name="com.example.applog.Activity.MenuInput" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.applog.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
@@ -61,6 +78,9 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 

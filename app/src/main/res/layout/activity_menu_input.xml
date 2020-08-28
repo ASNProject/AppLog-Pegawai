@@ -41,6 +41,20 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/ic_menu_black_24dp"></ImageView>
 
+        <ImageView
+            android:id="@+id/camera1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/menu"
+            android:layout_alignBottom="@+id/menu"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/menu"
+            android:layout_toLeftOf="@+id/menu"
+            android:background="@drawable/ic_baseline_photo_camera_24"></ImageView>
+
         <TextView
             android:id="@+id/text22"
             android:layout_width="wrap_content"
@@ -197,7 +211,7 @@
         <HorizontalScrollView
             android:id="@+id/scroll1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_below="@id/cardview3"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -206,13 +220,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <LinearLayout
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="jumlah sampling"
+                        android:text="jumlah aktual"
                         android:layout_gravity="center_horizontal"></TextView>
                   <RelativeLayout
                       android:layout_width="match_parent"
@@ -229,13 +243,14 @@
                   </RelativeLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="kepadatan"
+                        android:text="kepadatan bruto"
                         android:layout_gravity="center_horizontal"></TextView>
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -252,8 +267,33 @@
                     </RelativeLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="120dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kepadatan aktual"
+                        android:layout_gravity="center_horizontal"></TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/okepadatanaktual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"></TextView>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -611,28 +651,7 @@
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"></TextView>
 
-                    <TextView
-                        android:id="@+id/terakhirupdatee"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:text="01-01-2020"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="italic"></TextView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_toStartOf="@+id/terakhirupdatee"
-                        android:layout_toLeftOf="@+id/terakhirupdatee"
-                        android:text="Updated :"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="italic"></TextView>
 
                 </RelativeLayout>
             </RelativeLayout>
