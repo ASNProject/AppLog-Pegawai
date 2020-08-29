@@ -458,6 +458,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
 attr reverseLayout
 attr rippleColor
 attr scopeUris
@@ -1119,8 +1120,10 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_add_box_black_24dp
 drawable ic_add_circle_outline_black_24dp
+drawable ic_baseline_image_24
 drawable ic_baseline_insert_chart_24
 drawable ic_baseline_photo_camera_24
+drawable ic_baseline_save_alt_24
 drawable ic_delete_black_24dp
 drawable ic_edit_black_24dp
 drawable ic_email_black_24dp
@@ -1229,6 +1232,7 @@ id alertTitle
 id alkalinitas
 id all
 id always
+id ambilgambarlagi
 id ambilgambars
 id ambiltotal
 id asada
@@ -1244,6 +1248,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id bukagaleri
 id buttonPanel
 id buttondeletekolam
 id buttonlogin
@@ -1283,12 +1288,14 @@ id cardview5
 id cardview6
 id cardview7
 id cardview8
+id casa
 id center
 id center_horizontal
 id center_vertical
 id chains
 id checkbox
 id checked
+id chratpakan
 id chronometer
 id clear
 id cleartext
@@ -1304,6 +1311,7 @@ id customPanel
 id dabw
 id dadgmingguan
 id dark
+id datas
 id dbiomass
 id ddoc
 id decor_content_parent
@@ -1398,6 +1406,7 @@ id filled
 id fixed
 id forever
 id fragment_container_view_tag
+id gambargaleri
 id ghost_view
 id gone
 id grafikpakan
@@ -1497,6 +1506,8 @@ id ippagi
 id iprobion
 id iragi
 id iro2
+id isiketerangan
+id isinamagambar
 id isize
 id isp
 id isuhu
@@ -1536,6 +1547,7 @@ id line1
 id line3
 id line4
 id line5
+id line6
 id listMode
 id list_detai_air
 id list_detai_pakan
@@ -1620,10 +1632,12 @@ id progress_circular
 id progress_horizontal
 id q
 id radio
+id recycleviewgaleri
 id recycleviewlistkolam
 id right
 id right_icon
 id right_side
+id sadas
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1650,6 +1664,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id simpangambar
 id simpankolam
 id sliding_tabsair
 id sliding_tabspakan
@@ -1709,6 +1724,7 @@ id tanggalanpakan
 id tanggalanpanen
 id tanggalanperlakuan
 id tanggalansad
+id tanggalgaleri
 id tanggalgambar
 id terakhirupdate
 id terakhirupdateb
@@ -1738,6 +1754,7 @@ id text29
 id text3
 id text30
 id text31
+id text32
 id text4
 id text5
 id text6
@@ -1861,6 +1878,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_camera
+layout activity_chart_pakan
 layout activity_dashboard
 layout activity_data_air
 layout activity_data_pakan
@@ -1868,6 +1886,7 @@ layout activity_data_panen
 layout activity_data_perlakuan
 layout activity_data_sampling
 layout activity_edit_kolam
+layout activity_galeri
 layout activity_input__data__kolam
 layout activity_login
 layout activity_main
@@ -1903,6 +1922,7 @@ layout fragment_input_pakan
 layout fragment_input_panen
 layout fragment_input_perlakuan
 layout fragment_input_samping
+layout galeri_item
 layout item_detail_air
 layout item_detail_pakan
 layout item_detail_panen
@@ -2580,7 +2600,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
-styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon

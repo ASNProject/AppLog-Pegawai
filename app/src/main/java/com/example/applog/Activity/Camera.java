@@ -30,8 +30,11 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.applog.Adapter.Upload;
 import com.example.applog.R;
 import com.example.applog.SharePreference.SharePreferences;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -39,6 +42,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
@@ -51,7 +55,7 @@ import pl.aprilapps.easyphotopicker.EasyImage;
 
 public class Camera extends AppCompatActivity {
     private Button btnSimpan;
-    private ImageView imageView;
+    private ImageView imageView, ambillagi, bukagaleris;
     private EditText nama, tanggal, deskripsi;
     public static final int REQUEST_CODE_CAMERA = 001;
     public static final int REQUEST_CODE_GALLERY = 002;
@@ -63,6 +67,8 @@ public class Camera extends AppCompatActivity {
     private FirebaseUser user;
     SharePreferences sessions;
     ProgressDialog progressDialog;
+
+    private StorageTask storageTask;
 
 
 
@@ -77,22 +83,33 @@ public class Camera extends AppCompatActivity {
 
         btnSimpan = (Button) findViewById(R.id.ambilgambars);
         imageView = (ImageView) findViewById(R.id.takephoto);
+        ambillagi = findViewById(R.id.ambilgambarlagi);
+        bukagaleris = findViewById(R.id.bukagaleri);
         nama = (EditText) findViewById(R.id.namafile);
         tanggal = (EditText) findViewById(R.id.tanggalgambar);
         deskripsi = (EditText) findViewById(R.id.keterangangambar);
         String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         tanggal.setText(date_n);
-        mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
+        mStorageRef = FirebaseStorage.getInstance().getReference().child(user.getDisplayName()).child("uploads");
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Data User").child(user.getDisplayName()).child("Database").child(sessions.getData()).child("uploads");
         RequestImages();
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            uploadFile();
+                if (storageTask != null && storageTask.isInProgress()) {
+                    Toast.makeText(Camera.this, "Sedang Mengupload", Toast.LENGTH_SHORT).show();
+                } else {
+                    uploadFile();
+                    progressDialog = new ProgressDialog(Camera.this);
+                    progressDialog.setMessage("Mengupload Data");
+                    progressDialog.setIndeterminate(false);
+                    progressDialog.setCancelable(true);
+                    progressDialog.show();
+                }
             }
         });
-
-
+        ambilgambaragain();
+        lihatgaleri();
     }
 
     private void RequestImages() {
@@ -129,12 +146,12 @@ public class Camera extends AppCompatActivity {
             public void onImagePicked(File imageFile, EasyImage.ImageSource source, int type) {
                 switch (type){
                     case REQUEST_CODE_CAMERA:
-                        mImageUri = data.getData();
                         Glide.with(Camera.this)
                                 .load(imageFile)
                                 .centerCrop()
                                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                                 .into(imageView);
+                        mImageUri = Uri.fromFile(imageFile);
                         break;
 
                     case REQUEST_CODE_GALLERY:
@@ -162,51 +179,58 @@ public class Camera extends AppCompatActivity {
     }
     private void uploadFile() {
         if (mImageUri != null){
-            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtentions(mImageUri));
+            final StorageReference fileReference = mStorageRef.child(System.currentTimeMillis() + "." + getFileExtentions(mImageUri));
 
-            fileReference.putFile(mImageUri)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Handler handler = new Handler();
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
+            fileReference.putFile(mImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                @Override
+                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                    if (!task.isSuccessful()){
+                        throw task.getException();
+                    }
+                    return fileReference.getDownloadUrl();
+                }
+            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                @Override
+                public void onComplete(@NonNull Task<Uri> task) {
+                    if (task.isSuccessful()){
+                        Uri downloadUri = task.getResult();
+                        Upload upload = new Upload(nama.getText().toString().trim(), downloadUri.toString(), tanggal.getText().toString(), deskripsi.getText().toString().trim());
+                        mDatabase.push().setValue(upload);
+                    }
+                    Toast.makeText(Camera.this, "Upload Berhasil", Toast.LENGTH_LONG).show();
+                    progressDialog.dismiss();
+                    nama.setText("");
+                    deskripsi.setText("");
 
-                                }
-                            }, 5000);
-                            Toast.makeText(Camera.this, "Upload Berhasil", Toast.LENGTH_SHORT).show();
-                            progressDialog.dismiss();
-                           // Upload upload = new Upload(nama.getText().toString().trim(), taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
-                            Upload upload = new Upload(nama.getText().toString().trim(), taskSnapshot.getMetadata().getReference().getDownloadUrl().toString(), tanggal.getText().toString(), deskripsi.getText().toString());
-                            String uploadId = mDatabase.push().getKey();
-                            mDatabase.child(uploadId).setValue(upload);
-
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Camera.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    })
-                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-                            //double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
-                           // mProgressBar.setProgess(int) progress);
-                            progressDialog = new ProgressDialog(Camera.this);
-                            progressDialog.setMessage("Mengupload Data");
-                            progressDialog.setIndeterminate(false);
-                            progressDialog.setCancelable(true);
-                            progressDialog.show();
-                        }
-                    });
+                }
+            });
         }
         else {
             Toast.makeText(this, "Tidak ada gambar", Toast.LENGTH_SHORT).show();
         }
     }
+
+    private void ambilgambaragain(){
+        ambillagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Camera.this, Camera.class);
+                startActivity(i);
+                finish();
+            }
+        });
+    }
+    private void lihatgaleri(){
+        bukagaleris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Camera.this, Galeri.class);
+                startActivity(i);
+            }
+        });
+    }
+
+
 
 
 }

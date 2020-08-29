@@ -28,6 +28,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.applog.Activity.ChartPakan" />
+        <activity android:name="com.example.applog.Activity.Galeri" />
         <activity android:name="com.example.applog.Activity.TentangAplikasi" />
         <activity android:name="com.example.applog.Activity.Camera" />
         <activity android:name="com.example.applog.Activity.EditKolam" />
@@ -38,12 +40,12 @@
         <activity android:name="com.example.applog.Activity.DataPakan" />
         <activity android:name="com.example.applog.Fragment.DetailAir" />
         <activity android:name="com.example.applog.Fragment.InputDataAir" />
-        <activity android:name="com.example.applog.Activity.Login" />
+        <activity android:name="com.example.applog.Activity.MenuInput" />
         <activity android:name="com.example.applog.Activity.Input_Data_Kolam" />
         <activity android:name="com.example.applog.Activity.Dashboard" />
         <activity android:name="com.example.applog.Activity.Register" />
         <activity android:name="com.example.applog.MainActivity" />
-        <activity android:name="com.example.applog.Activity.MenuInput" >
+        <activity android:name="com.example.applog.Activity.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,6 +85,11 @@
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.applog.com.squareup.picasso"
+            android:exported="false" />
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

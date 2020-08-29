@@ -23,8 +23,8 @@
         android:layout_below="@id/text31"
         android:text="Aplikasi ini adalah sebuah aplikasi untuk melaporkan data harian dari tambak udang disuatu tambak. Aplikasi ini berjalan dengan realtime dan dapat disinkronasi secara otomatis sehingga dapat dilihat oleh pegawai dan pemilik tambak. "
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         ></TextView>
 
     <TextView

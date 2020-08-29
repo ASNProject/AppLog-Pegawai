@@ -11,13 +11,17 @@ public class Upload {
 
     public Upload(String name, String imageUrl, String tanggal, String deskripsi){
         if (name.trim().equals("")){
-            name = "No Name";
+            name = "Tidak ada nama";
+        }
+        if (deskripsi.trim().equals("")){
+            deskripsi = "Tidak ada deskripsi";
         }
         mName = name;
         mTanggal = tanggal;
         mDeskripsi = deskripsi;
         mImageUrl = imageUrl;
     }
+
 
     public String getmName() {
         return mName;

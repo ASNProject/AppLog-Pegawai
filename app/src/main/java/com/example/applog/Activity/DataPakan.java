@@ -16,13 +16,13 @@ import com.example.applog.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class DataPakan extends AppCompatActivity {
-     private ImageView cameras;
+     private ImageView grafik;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_pakan);
-
+        grafik = findViewById(R.id.grafikpakan);
 
 
         ViewPager viewPager = findViewById(R.id.viewpagerpakan);
@@ -31,6 +31,14 @@ public class DataPakan extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.sliding_tabspakan);
         tabLayout.setupWithViewPager(viewPager);
+
+        grafik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DataPakan.this, ChartPakan.class);
+                startActivity(i);
+            }
+        });
     }
 
 

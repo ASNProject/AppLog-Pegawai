@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.TentangAplikasi"></activity>
+        <activity android:name=".Activity.ChartPakan"></activity>
+        <activity android:name=".Activity.Galeri" />
+        <activity android:name=".Activity.TentangAplikasi" />
         <activity android:name=".Activity.Camera" />
         <activity android:name=".Activity.EditKolam" />
         <activity android:name=".Activity.DataPerlakuan" />

@@ -291,7 +291,7 @@ public class Input_Data_Kolam extends AppCompatActivity {
                         kecerahan, alkalinitas, suhu, cas, no2, no3, nh3, warna));
                 updatedataair(new RequestUpdateAir(tanggalair, tinggiair, dopagi, domalam, phpagi, phmalam,
                         kecerahan, alkalinitas, suhu, cas, no2, no3, nh3, warna));
-                datapakan(new RequestDataPakan(tanggalpakan, kodepakan, jam6, jam10, jam14, jam18, jam22, keteranganpakan, jumlahharian, jumlahtotal, usia));
+                datapakan(new RequestDataPakan(tanggalpakan, kodepakan, jam6, jam10, jam14, jam18, jam22, jumlahharian, jumlahtotal, keteranganpakan, usia));
                 updatedatapakan(new RequestUpdatePakan(tanggalpakan, kodepakan, jam6, jam10, jam14, jam18, jam22, keteranganpakan, jumlahharian, jumlahtotal, usia));
                 datasampling(new RequestDataSampling(tanggalsampling, jumlahtebarsamplings, mbw, pakanseharisampling, totalpakansampling, fr, populasi, adgmingguan,
                         biomass, sp, konsumsifeed, fcr, usias));

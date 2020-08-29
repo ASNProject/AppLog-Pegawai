@@ -315,19 +315,20 @@ public class MenuInput extends AppCompatActivity implements PopupMenu.OnMenuItem
                 startActivity(i);
                 break;
             case R.id.menu2:
-                Toast.makeText(getApplicationContext(), "Menu Lihat Gambar dipilih", Toast.LENGTH_LONG).show();
+                Intent menu2 = new Intent(MenuInput.this, Galeri.class);
+                startActivity(menu2);
                 break;
             case R.id.menua1:
                 Toast.makeText(getApplicationContext(), "Menu Profil dipilih", Toast.LENGTH_LONG).show();
                 break;
             case R.id.menua2:
-                Intent menu2 = new Intent(MenuInput.this, Dashboard.class);
-                startActivity(menu2);
+                Intent menua2 = new Intent(MenuInput.this, Dashboard.class);
+                startActivity(menua2);
                 finish();
                 break;
             case R.id.menua3:
-                Intent menu3 = new Intent(MenuInput.this, TentangAplikasi.class);
-                startActivity(menu3);
+                Intent menua3 = new Intent(MenuInput.this, TentangAplikasi.class);
+                startActivity(menua3);
                 break;
             case R.id.menua4:
                 finish();

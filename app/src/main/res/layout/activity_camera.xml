@@ -6,13 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Camera">
 
+    <TextView
+        android:id="@+id/text32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Gambar"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"></TextView>
+
+    <ImageView
+        android:id="@+id/ambilgambarlagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/takephoto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/ic_baseline_photo_camera_24"></ImageView>
+
+    <ImageView
+        android:id="@+id/bukagaleri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ambilgambarlagi"
+        android:layout_alignBottom="@+id/ambilgambarlagi"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toStartOf="@+id/ambilgambarlagi"
+        android:layout_toLeftOf="@+id/ambilgambarlagi"
+        android:background="@drawable/ic_baseline_image_24"></ImageView>
+
     <ImageView
         android:id="@+id/takephoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/line3"
+        android:layout_below="@+id/text32"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="0dp"></ImageView>
 
@@ -109,7 +147,7 @@
         android:layout_marginLeft="150dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button1"
         android:text="Simpan"
         android:textColor="#FFFFFF"
